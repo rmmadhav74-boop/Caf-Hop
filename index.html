@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CaféHop — Find Your Vibe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="logo">
+        <span class="logo-icon">☕</span>
+        <span class="logo-text">CaféHop</span>
+      </div>
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search" placeholder="Search cafés by name or vibe..." autocomplete="off">
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-badge">✦ Discover &amp; Explore ✦</div>
+    <h1 class="hero-title">Find your perfect<br><em>café vibe</em></h1>
+    <p class="hero-sub">Cozy spots to study, chill, and connect — all in one place</p>
+    <div class="hero-tags">
+      <span class="tag" data-filter="study">📚 Study Spots</span>
+      <span class="tag" data-filter="aesthetic">📸 Aesthetic</span>
+      <span class="tag" data-filter="friends">👥 With Friends</span>
+      <span class="tag" data-filter="budget">💸 Budget</span>
+      <span class="tag active" data-filter="all">✨ All Cafés</span>
+    </div>
+  </section>
+
+  <main>
+    <div id="results-bar"><span id="results-count"></span></div>
+    <div id="loading" class="loading-state">
+      <div class="loader-ring"></div>
+      <p>Brewing your café list…</p>
+    </div>
+    <div id="cafes-container"></div>
+    <div id="empty-state" class="empty-state" style="display:none;">
+      <span>☕</span>
+      <p>No cafés found. Try another search!</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Made with ☕ &amp; love · CaféHop 2025</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
