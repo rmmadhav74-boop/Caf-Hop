@@ -7,7 +7,7 @@ CaféHop is a web-based café discovery application designed for students to fin
 
 ## 🌐 API Used
 
-Foursquare Places API will be used to fetch real-time café data such as location, ratings, and details.
+  Overpass API (OpenStreetMap) will be used to fetch real-time café data such as location, ratings, and details.
 
 ## 🚀 Planned Features
 
