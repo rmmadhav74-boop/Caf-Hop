@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CaféHop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <span class="brand">◎ CaféHop</span>
+      <input type="text" id="search" placeholder="Search cafés…" />
+      <span class="loc" id="locLabel">📍 Detecting…</span>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__inner">
+      <p class="eyebrow">— Milestone 3 · Core Features</p>
+      <h1>Find where<br/><em>coffee feels right</em></h1>
+      <p class="sub">Discover local cafés. Sort by distance or name.</p>
+      
+      <div class="pills" id="filters">
+        <button class="pill pill--active" data-filter="all">All</button>
+        <button class="pill" data-filter="wifi">📶 WiFi</button>
+        <button class="pill" data-filter="outdoor">🌿 Outdoor</button>
+        <button class="pill" data-filter="veg">🥗 Veg</button>
+        <button class="pill" data-filter="open">🕐 Open</button>
+      </div>
+
+      <div class="sort-container">
+        <select id="sortSelect" class="sort-dropdown">
+          <option value="distance">Sort by: Nearest</option>
+          <option value="name">Sort by: Name (A-Z)</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <div class="statsbar">
+    <span><b id="statCount">—</b> cafés</span>
+    <span><b id="statRadius">3km</b> radius</span>
+    <span><b>OSM</b> source</span>
+    <span><b>Free</b> no key</span>
+  </div>
+
+  <main class="main">
+    <div class="loader" id="loader">
+      <div class="ring"></div>
+      <p>Brewing your list…</p>
+    </div>
+    <div class="error" id="errorState" style="display:none">
+      <p>⚠ <span id="errorMsg">Something went wrong.</span></p>
+      <button id="retryBtn">Retry</button>
+    </div>
+    <div class="empty" id="emptyState" style="display:none">
+      <p>◎ No cafés matched. Try another filter.</p>
+    </div>
+    <div class="grid" id="grid"></div>
+  </main>
+
+  <footer class="footer">
+    <span>◎ CaféHop</span>
+    <span>Powered by <a href="https://openstreetmap.org" target="_blank">OpenStreetMap</a></span>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
